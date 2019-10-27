@@ -27,8 +27,6 @@ class TrackAction extends ModelBase implements TrackActionInterface
         return [
             "action"      => $this->action,
             "route"       => $this->route,
-//            "created_at"  => $this->getDateTimeStringFrom("created_at"),
-//            "updated_at"  => $this->getDateTimeStringFrom("updated_at"),
             "times"       => $this->times
         ];
     }

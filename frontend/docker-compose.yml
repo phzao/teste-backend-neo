@@ -9,3 +9,8 @@ services:
       - .:/app
     ports:
       - "80:80"
+    networks:
+      - db-network
+
+networks:
+  db-network:

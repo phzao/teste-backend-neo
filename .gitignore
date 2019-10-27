@@ -8,6 +8,7 @@ db
 /vendor
 /db
 .idea
+.DS_Store
 /backend/.env
 /backend/.env.backup
 .phpunit.result.cache

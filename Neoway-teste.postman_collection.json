@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "b3c1b40f-304d-475d-a3d0-e886c0aab18a",
+		"name": "Neoway-teste",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/documents",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"documents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/status",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/documents/5db49cf103e18f6001739c04",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"documents",
+						"5db49cf103e18f6001739c04"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Store",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"cpf\": \"00022026118\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/documents",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"documents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/documents/2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"documents",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set on blacklist",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/documents/blacklist/add/5db49cf103e18f6001739c04",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"documents",
+						"blacklist",
+						"add",
+						"5db49cf103e18f6001739c04"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove from blacklist",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/documents/blacklist/del/5db49cf103e18f6001739c04",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"documents",
+						"blacklist",
+						"del",
+						"5db49cf103e18f6001739c04"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

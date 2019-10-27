@@ -3,6 +3,7 @@
 namespace Tests\Document;
 
 use App\Models\Document;
+use Laravel\Lumen\Testing\DatabaseTransactions;
 
 /**
  * Class DocumentTest
@@ -11,6 +12,7 @@ use App\Models\Document;
 class DocumentTest extends \TestCase
 {
     const  URL = 'api/v1/documents';
+    use DatabaseTransactions;
 
     public function testDocumentObject()
     {
@@ -36,7 +38,7 @@ class DocumentTest extends \TestCase
         $this->assertArrayHasKey("cnpj",$document->getCNPJRule());
         $this->assertArrayHasKey("cpf",$document->getCPFRule());
     }
-
+    
     public function testFailCreateDocumentCPF()
     {
         $templateBody = [];
@@ -223,19 +225,15 @@ class DocumentTest extends \TestCase
         $response->assertResponseStatus(405);
 
         $templateMessage = [
-            "status" => "fail",
-            "data"   => [
-                "id" => [
-                    "The id must be an integer."
-                ]
-            ]
+            "status"  => "error",
+            "message" => "There is not register to this ID!"
         ];
 
         $response = $this->json('PUT', self::URL."/a");
 
         $response
             ->seeJsonEquals($templateMessage)
-            ->assertResponseStatus(422);
+            ->assertResponseStatus(400);
     }
 
     public function testFailUpdateDocumentCPF()
@@ -245,19 +243,15 @@ class DocumentTest extends \TestCase
         $response->assertResponseStatus(405);
 
         $templateMessage = [
-            "status" => "fail",
-            "data"   => [
-                "id" => [
-                    "The id must be an integer."
-                ]
-            ]
+            "status"  => "error",
+            "message" => "There is not register to this ID!"
         ];
 
         $response = $this->json('PUT', self::URL."/a");
 
         $response
             ->seeJsonEquals($templateMessage)
-            ->assertResponseStatus(422);
+            ->assertResponseStatus(400);
 
         $templateMessage = [
             "status"  => "error",
@@ -269,14 +263,5 @@ class DocumentTest extends \TestCase
         $response
             ->seeJsonEquals($templateMessage)
             ->assertResponseStatus(400);
-
-        $response = $this->json('POST', self::URL, ["cnpj"=>"03477793000122"]);
-
-        $response
-            ->assertResponseStatus(201);
-
-        $response = $this->json('GET', self::URL);
-
-        dd($response->response->original);
     }
 }
