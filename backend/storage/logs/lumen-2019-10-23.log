@@ -1,0 +1,236 @@
+[2019-10-23 00:36:51] local.ERROR: Symfony\Component\Console\Exception\CommandNotFoundException: Command "make:rule" is not defined.
+
+Did you mean one of these?
+    make:migration
+    make:seeder in /var/www/vendor/symfony/console/Application.php:660
+Stack trace:
+#0 /var/www/vendor/symfony/console/Application.php(237): Symfony\Component\Console\Application->find('make:rule')
+#1 /var/www/vendor/symfony/console/Application.php(149): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 /var/www/vendor/illuminate/console/Application.php(90): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /var/www/vendor/laravel/lumen-framework/src/Console/Kernel.php(115): Illuminate\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 /var/www/artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 {main} {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:rule\" is not defined.
+
+Did you mean one of these?
+    make:migration
+    make:seeder at /var/www/vendor/symfony/console/Application.php:660)
+[stacktrace]
+#0 /var/www/vendor/symfony/console/Application.php(237): Symfony\\Component\\Console\\Application->find('make:rule')
+#1 /var/www/vendor/symfony/console/Application.php(149): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 /var/www/vendor/illuminate/console/Application.php(90): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /var/www/vendor/laravel/lumen-framework/src/Console/Kernel.php(115): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /var/www/artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2019-10-23 10:12:09] local.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'App\AppProviders\BaseRepositoryServiceProvider' not found in /var/www/vendor/laravel/lumen-framework/src/Application.php:190
+Stack trace:
+#0 /var/www/app/Providers/AppServiceProvider.php(17): Laravel\Lumen\Application->register('App\\AppProvider...')
+#1 /var/www/vendor/laravel/lumen-framework/src/Application.php(200): App\Providers\AppServiceProvider->register()
+#2 /var/www/bootstrap/app.php(79): Laravel\Lumen\Application->register(Object(App\Providers\AppServiceProvider))
+#3 /var/www/public/index.php(14): require('/var/www/bootst...')
+#4 {main} {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'App\\AppProviders\\BaseRepositoryServiceProvider' not found at /var/www/vendor/laravel/lumen-framework/src/Application.php:190)
+[stacktrace]
+#0 /var/www/app/Providers/AppServiceProvider.php(17): Laravel\\Lumen\\Application->register('App\\\\AppProvider...')
+#1 /var/www/vendor/laravel/lumen-framework/src/Application.php(200): App\\Providers\\AppServiceProvider->register()
+#2 /var/www/bootstrap/app.php(79): Laravel\\Lumen\\Application->register(Object(App\\Providers\\AppServiceProvider))
+#3 /var/www/public/index.php(14): require('/var/www/bootst...')
+#4 {main}
+"} 
+[2019-10-23 10:13:12] local.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'App\AppProviders\BaseRepositoryServiceProvider' not found in /var/www/vendor/laravel/lumen-framework/src/Application.php:190
+Stack trace:
+#0 /var/www/app/Providers/AppServiceProvider.php(17): Laravel\Lumen\Application->register('App\\AppProvider...')
+#1 /var/www/vendor/laravel/lumen-framework/src/Application.php(200): App\Providers\AppServiceProvider->register()
+#2 /var/www/bootstrap/app.php(79): Laravel\Lumen\Application->register(Object(App\Providers\AppServiceProvider))
+#3 /var/www/public/index.php(14): require('/var/www/bootst...')
+#4 {main} {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'App\\AppProviders\\BaseRepositoryServiceProvider' not found at /var/www/vendor/laravel/lumen-framework/src/Application.php:190)
+[stacktrace]
+#0 /var/www/app/Providers/AppServiceProvider.php(17): Laravel\\Lumen\\Application->register('App\\\\AppProvider...')
+#1 /var/www/vendor/laravel/lumen-framework/src/Application.php(200): App\\Providers\\AppServiceProvider->register()
+#2 /var/www/bootstrap/app.php(79): Laravel\\Lumen\\Application->register(Object(App\\Providers\\AppServiceProvider))
+#3 /var/www/public/index.php(14): require('/var/www/bootst...')
+#4 {main}
+"} 
+[2019-10-23 10:14:46] local.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'App\AppProviders\BaseRepositoryServiceProvider' not found in /var/www/vendor/laravel/lumen-framework/src/Application.php:190
+Stack trace:
+#0 /var/www/app/Providers/AppServiceProvider.php(17): Laravel\Lumen\Application->register('App\\AppProvider...')
+#1 /var/www/vendor/laravel/lumen-framework/src/Application.php(200): App\Providers\AppServiceProvider->register()
+#2 /var/www/bootstrap/app.php(79): Laravel\Lumen\Application->register(Object(App\Providers\AppServiceProvider))
+#3 /var/www/public/index.php(14): require('/var/www/bootst...')
+#4 {main} {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'App\\AppProviders\\BaseRepositoryServiceProvider' not found at /var/www/vendor/laravel/lumen-framework/src/Application.php:190)
+[stacktrace]
+#0 /var/www/app/Providers/AppServiceProvider.php(17): Laravel\\Lumen\\Application->register('App\\\\AppProvider...')
+#1 /var/www/vendor/laravel/lumen-framework/src/Application.php(200): App\\Providers\\AppServiceProvider->register()
+#2 /var/www/bootstrap/app.php(79): Laravel\\Lumen\\Application->register(Object(App\\Providers\\AppServiceProvider))
+#3 /var/www/public/index.php(14): require('/var/www/bootst...')
+#4 {main}
+"} 
+[2019-10-23 10:15:15] local.ERROR: ReflectionException: Class App\Repositories\ErrorMessageInterface does not exist in /var/www/vendor/illuminate/container/Container.php:872
+Stack trace:
+#0 /var/www/vendor/illuminate/container/Container.php(872): ReflectionParameter->getClass()
+#1 /var/www/vendor/illuminate/container/Container.php(835): Illuminate\Container\Container->resolveDependencies(Array)
+#2 /var/www/vendor/illuminate/container/Container.php(682): Illuminate\Container\Container->build('App\\Repositorie...')
+#3 /var/www/vendor/illuminate/container/Container.php(266): Illuminate\Container\Container->resolve('App\\Repositorie...', Array, false)
+#4 /var/www/vendor/illuminate/container/Container.php(800): Illuminate\Container\Container->Illuminate\Container\{closure}(Object(Laravel\Lumen\Application), Array)
+#5 /var/www/vendor/illuminate/container/Container.php(682): Illuminate\Container\Container->build(Object(Closure))
+#6 /var/www/vendor/illuminate/container/Container.php(630): Illuminate\Container\Container->resolve('App\\Repositorie...', Array)
+#7 /var/www/vendor/laravel/lumen-framework/src/Application.php(267): Illuminate\Container\Container->make('App\\Repositorie...', Array)
+#8 /var/www/vendor/illuminate/container/Container.php(946): Laravel\Lumen\Application->make('App\\Repositorie...')
+#9 /var/www/vendor/illuminate/container/Container.php(874): Illuminate\Container\Container->resolveClass(Object(ReflectionParameter))
+#10 /var/www/vendor/illuminate/container/Container.php(835): Illuminate\Container\Container->resolveDependencies(Array)
+#11 /var/www/vendor/illuminate/container/Container.php(682): Illuminate\Container\Container->build('App\\Http\\Contro...')
+#12 /var/www/vendor/illuminate/container/Container.php(630): Illuminate\Container\Container->resolve('App\\Http\\Contro...', Array)
+#13 /var/www/vendor/laravel/lumen-framework/src/Application.php(267): Illuminate\Container\Container->make('App\\Http\\Contro...', Array)
+#14 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(311): Laravel\Lumen\Application->make('App\\Http\\Contro...')
+#15 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(278): Laravel\Lumen\Application->callControllerAction(Array)
+#16 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(263): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#17 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(165): Laravel\Lumen\Application->handleFoundRoute(Array)
+#18 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(416): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(Object(Laravel\Lumen\Http\Request))
+#19 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(171): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#20 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(108): Laravel\Lumen\Application->dispatch(NULL)
+#21 /var/www/public/index.php(28): Laravel\Lumen\Application->run()
+#22 {main} {"exception":"[object] (ReflectionException(code: 0): Class App\\Repositories\\ErrorMessageInterface does not exist at /var/www/vendor/illuminate/container/Container.php:872)
+[stacktrace]
+#0 /var/www/vendor/illuminate/container/Container.php(872): ReflectionParameter->getClass()
+#1 /var/www/vendor/illuminate/container/Container.php(835): Illuminate\\Container\\Container->resolveDependencies(Array)
+#2 /var/www/vendor/illuminate/container/Container.php(682): Illuminate\\Container\\Container->build('App\\\\Repositorie...')
+#3 /var/www/vendor/illuminate/container/Container.php(266): Illuminate\\Container\\Container->resolve('App\\\\Repositorie...', Array, false)
+#4 /var/www/vendor/illuminate/container/Container.php(800): Illuminate\\Container\\Container->Illuminate\\Container\\{closure}(Object(Laravel\\Lumen\\Application), Array)
+#5 /var/www/vendor/illuminate/container/Container.php(682): Illuminate\\Container\\Container->build(Object(Closure))
+#6 /var/www/vendor/illuminate/container/Container.php(630): Illuminate\\Container\\Container->resolve('App\\\\Repositorie...', Array)
+#7 /var/www/vendor/laravel/lumen-framework/src/Application.php(267): Illuminate\\Container\\Container->make('App\\\\Repositorie...', Array)
+#8 /var/www/vendor/illuminate/container/Container.php(946): Laravel\\Lumen\\Application->make('App\\\\Repositorie...')
+#9 /var/www/vendor/illuminate/container/Container.php(874): Illuminate\\Container\\Container->resolveClass(Object(ReflectionParameter))
+#10 /var/www/vendor/illuminate/container/Container.php(835): Illuminate\\Container\\Container->resolveDependencies(Array)
+#11 /var/www/vendor/illuminate/container/Container.php(682): Illuminate\\Container\\Container->build('App\\\\Http\\\\Contro...')
+#12 /var/www/vendor/illuminate/container/Container.php(630): Illuminate\\Container\\Container->resolve('App\\\\Http\\\\Contro...', Array)
+#13 /var/www/vendor/laravel/lumen-framework/src/Application.php(267): Illuminate\\Container\\Container->make('App\\\\Http\\\\Contro...', Array)
+#14 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(311): Laravel\\Lumen\\Application->make('App\\\\Http\\\\Contro...')
+#15 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(278): Laravel\\Lumen\\Application->callControllerAction(Array)
+#16 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(263): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#17 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(165): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#18 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(416): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#19 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(171): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#20 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(108): Laravel\\Lumen\\Application->dispatch(NULL)
+#21 /var/www/public/index.php(28): Laravel\\Lumen\\Application->run()
+#22 {main}
+"} 
+[2019-10-23 10:17:16] local.ERROR: ReflectionException: Class App\Repositories\ErrorMessageInterface does not exist in /var/www/vendor/illuminate/container/Container.php:872
+Stack trace:
+#0 /var/www/vendor/illuminate/container/Container.php(872): ReflectionParameter->getClass()
+#1 /var/www/vendor/illuminate/container/Container.php(835): Illuminate\Container\Container->resolveDependencies(Array)
+#2 /var/www/vendor/illuminate/container/Container.php(682): Illuminate\Container\Container->build('App\\Repositorie...')
+#3 /var/www/vendor/illuminate/container/Container.php(266): Illuminate\Container\Container->resolve('App\\Repositorie...', Array, false)
+#4 /var/www/vendor/illuminate/container/Container.php(800): Illuminate\Container\Container->Illuminate\Container\{closure}(Object(Laravel\Lumen\Application), Array)
+#5 /var/www/vendor/illuminate/container/Container.php(682): Illuminate\Container\Container->build(Object(Closure))
+#6 /var/www/vendor/illuminate/container/Container.php(630): Illuminate\Container\Container->resolve('App\\Repositorie...', Array)
+#7 /var/www/vendor/laravel/lumen-framework/src/Application.php(267): Illuminate\Container\Container->make('App\\Repositorie...', Array)
+#8 /var/www/vendor/illuminate/container/Container.php(946): Laravel\Lumen\Application->make('App\\Repositorie...')
+#9 /var/www/vendor/illuminate/container/Container.php(874): Illuminate\Container\Container->resolveClass(Object(ReflectionParameter))
+#10 /var/www/vendor/illuminate/container/Container.php(835): Illuminate\Container\Container->resolveDependencies(Array)
+#11 /var/www/vendor/illuminate/container/Container.php(682): Illuminate\Container\Container->build('App\\Http\\Contro...')
+#12 /var/www/vendor/illuminate/container/Container.php(630): Illuminate\Container\Container->resolve('App\\Http\\Contro...', Array)
+#13 /var/www/vendor/laravel/lumen-framework/src/Application.php(267): Illuminate\Container\Container->make('App\\Http\\Contro...', Array)
+#14 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(311): Laravel\Lumen\Application->make('App\\Http\\Contro...')
+#15 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(278): Laravel\Lumen\Application->callControllerAction(Array)
+#16 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(263): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#17 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(165): Laravel\Lumen\Application->handleFoundRoute(Array)
+#18 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(416): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(Object(Laravel\Lumen\Http\Request))
+#19 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(171): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#20 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(108): Laravel\Lumen\Application->dispatch(NULL)
+#21 /var/www/public/index.php(28): Laravel\Lumen\Application->run()
+#22 {main} {"exception":"[object] (ReflectionException(code: 0): Class App\\Repositories\\ErrorMessageInterface does not exist at /var/www/vendor/illuminate/container/Container.php:872)
+[stacktrace]
+#0 /var/www/vendor/illuminate/container/Container.php(872): ReflectionParameter->getClass()
+#1 /var/www/vendor/illuminate/container/Container.php(835): Illuminate\\Container\\Container->resolveDependencies(Array)
+#2 /var/www/vendor/illuminate/container/Container.php(682): Illuminate\\Container\\Container->build('App\\\\Repositorie...')
+#3 /var/www/vendor/illuminate/container/Container.php(266): Illuminate\\Container\\Container->resolve('App\\\\Repositorie...', Array, false)
+#4 /var/www/vendor/illuminate/container/Container.php(800): Illuminate\\Container\\Container->Illuminate\\Container\\{closure}(Object(Laravel\\Lumen\\Application), Array)
+#5 /var/www/vendor/illuminate/container/Container.php(682): Illuminate\\Container\\Container->build(Object(Closure))
+#6 /var/www/vendor/illuminate/container/Container.php(630): Illuminate\\Container\\Container->resolve('App\\\\Repositorie...', Array)
+#7 /var/www/vendor/laravel/lumen-framework/src/Application.php(267): Illuminate\\Container\\Container->make('App\\\\Repositorie...', Array)
+#8 /var/www/vendor/illuminate/container/Container.php(946): Laravel\\Lumen\\Application->make('App\\\\Repositorie...')
+#9 /var/www/vendor/illuminate/container/Container.php(874): Illuminate\\Container\\Container->resolveClass(Object(ReflectionParameter))
+#10 /var/www/vendor/illuminate/container/Container.php(835): Illuminate\\Container\\Container->resolveDependencies(Array)
+#11 /var/www/vendor/illuminate/container/Container.php(682): Illuminate\\Container\\Container->build('App\\\\Http\\\\Contro...')
+#12 /var/www/vendor/illuminate/container/Container.php(630): Illuminate\\Container\\Container->resolve('App\\\\Http\\\\Contro...', Array)
+#13 /var/www/vendor/laravel/lumen-framework/src/Application.php(267): Illuminate\\Container\\Container->make('App\\\\Http\\\\Contro...', Array)
+#14 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(311): Laravel\\Lumen\\Application->make('App\\\\Http\\\\Contro...')
+#15 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(278): Laravel\\Lumen\\Application->callControllerAction(Array)
+#16 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(263): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#17 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(165): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#18 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(416): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#19 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(171): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#20 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(108): Laravel\\Lumen\\Application->dispatch(NULL)
+#21 /var/www/public/index.php(28): Laravel\\Lumen\\Application->run()
+#22 {main}
+"} 
+[2019-10-23 10:18:18] local.ERROR: Illuminate\Contracts\Container\BindingResolutionException: Target [App\Utils\HandleErrors\ErrorMessageInterface] is not instantiable while building [App\Http\Controllers\DocumentController, App\Repositories\DocumentRepository]. in /var/www/vendor/illuminate/container/Container.php:979
+Stack trace:
+#0 /var/www/vendor/illuminate/container/Container.php(813): Illuminate\Container\Container->notInstantiable('App\\Utils\\Handl...')
+#1 /var/www/vendor/illuminate/container/Container.php(682): Illuminate\Container\Container->build('App\\Utils\\Handl...')
+#2 /var/www/vendor/illuminate/container/Container.php(630): Illuminate\Container\Container->resolve('App\\Utils\\Handl...', Array)
+#3 /var/www/vendor/laravel/lumen-framework/src/Application.php(267): Illuminate\Container\Container->make('App\\Utils\\Handl...', Array)
+#4 /var/www/vendor/illuminate/container/Container.php(946): Laravel\Lumen\Application->make('App\\Utils\\Handl...')
+#5 /var/www/vendor/illuminate/container/Container.php(874): Illuminate\Container\Container->resolveClass(Object(ReflectionParameter))
+#6 /var/www/vendor/illuminate/container/Container.php(835): Illuminate\Container\Container->resolveDependencies(Array)
+#7 /var/www/vendor/illuminate/container/Container.php(682): Illuminate\Container\Container->build('App\\Repositorie...')
+#8 /var/www/vendor/illuminate/container/Container.php(266): Illuminate\Container\Container->resolve('App\\Repositorie...', Array, false)
+#9 /var/www/vendor/illuminate/container/Container.php(800): Illuminate\Container\Container->Illuminate\Container\{closure}(Object(Laravel\Lumen\Application), Array)
+#10 /var/www/vendor/illuminate/container/Container.php(682): Illuminate\Container\Container->build(Object(Closure))
+#11 /var/www/vendor/illuminate/container/Container.php(630): Illuminate\Container\Container->resolve('App\\Repositorie...', Array)
+#12 /var/www/vendor/laravel/lumen-framework/src/Application.php(267): Illuminate\Container\Container->make('App\\Repositorie...', Array)
+#13 /var/www/vendor/illuminate/container/Container.php(946): Laravel\Lumen\Application->make('App\\Repositorie...')
+#14 /var/www/vendor/illuminate/container/Container.php(874): Illuminate\Container\Container->resolveClass(Object(ReflectionParameter))
+#15 /var/www/vendor/illuminate/container/Container.php(835): Illuminate\Container\Container->resolveDependencies(Array)
+#16 /var/www/vendor/illuminate/container/Container.php(682): Illuminate\Container\Container->build('App\\Http\\Contro...')
+#17 /var/www/vendor/illuminate/container/Container.php(630): Illuminate\Container\Container->resolve('App\\Http\\Contro...', Array)
+#18 /var/www/vendor/laravel/lumen-framework/src/Application.php(267): Illuminate\Container\Container->make('App\\Http\\Contro...', Array)
+#19 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(311): Laravel\Lumen\Application->make('App\\Http\\Contro...')
+#20 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(278): Laravel\Lumen\Application->callControllerAction(Array)
+#21 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(263): Laravel\Lumen\Application->callActionOnArrayBasedRoute(Array)
+#22 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(165): Laravel\Lumen\Application->handleFoundRoute(Array)
+#23 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(416): Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}(Object(Laravel\Lumen\Http\Request))
+#24 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(171): Laravel\Lumen\Application->sendThroughPipeline(Array, Object(Closure))
+#25 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(108): Laravel\Lumen\Application->dispatch(NULL)
+#26 /var/www/public/index.php(28): Laravel\Lumen\Application->run()
+#27 {main} {"exception":"[object] (Illuminate\\Contracts\\Container\\BindingResolutionException(code: 0): Target [App\\Utils\\HandleErrors\\ErrorMessageInterface] is not instantiable while building [App\\Http\\Controllers\\DocumentController, App\\Repositories\\DocumentRepository]. at /var/www/vendor/illuminate/container/Container.php:979)
+[stacktrace]
+#0 /var/www/vendor/illuminate/container/Container.php(813): Illuminate\\Container\\Container->notInstantiable('App\\\\Utils\\\\Handl...')
+#1 /var/www/vendor/illuminate/container/Container.php(682): Illuminate\\Container\\Container->build('App\\\\Utils\\\\Handl...')
+#2 /var/www/vendor/illuminate/container/Container.php(630): Illuminate\\Container\\Container->resolve('App\\\\Utils\\\\Handl...', Array)
+#3 /var/www/vendor/laravel/lumen-framework/src/Application.php(267): Illuminate\\Container\\Container->make('App\\\\Utils\\\\Handl...', Array)
+#4 /var/www/vendor/illuminate/container/Container.php(946): Laravel\\Lumen\\Application->make('App\\\\Utils\\\\Handl...')
+#5 /var/www/vendor/illuminate/container/Container.php(874): Illuminate\\Container\\Container->resolveClass(Object(ReflectionParameter))
+#6 /var/www/vendor/illuminate/container/Container.php(835): Illuminate\\Container\\Container->resolveDependencies(Array)
+#7 /var/www/vendor/illuminate/container/Container.php(682): Illuminate\\Container\\Container->build('App\\\\Repositorie...')
+#8 /var/www/vendor/illuminate/container/Container.php(266): Illuminate\\Container\\Container->resolve('App\\\\Repositorie...', Array, false)
+#9 /var/www/vendor/illuminate/container/Container.php(800): Illuminate\\Container\\Container->Illuminate\\Container\\{closure}(Object(Laravel\\Lumen\\Application), Array)
+#10 /var/www/vendor/illuminate/container/Container.php(682): Illuminate\\Container\\Container->build(Object(Closure))
+#11 /var/www/vendor/illuminate/container/Container.php(630): Illuminate\\Container\\Container->resolve('App\\\\Repositorie...', Array)
+#12 /var/www/vendor/laravel/lumen-framework/src/Application.php(267): Illuminate\\Container\\Container->make('App\\\\Repositorie...', Array)
+#13 /var/www/vendor/illuminate/container/Container.php(946): Laravel\\Lumen\\Application->make('App\\\\Repositorie...')
+#14 /var/www/vendor/illuminate/container/Container.php(874): Illuminate\\Container\\Container->resolveClass(Object(ReflectionParameter))
+#15 /var/www/vendor/illuminate/container/Container.php(835): Illuminate\\Container\\Container->resolveDependencies(Array)
+#16 /var/www/vendor/illuminate/container/Container.php(682): Illuminate\\Container\\Container->build('App\\\\Http\\\\Contro...')
+#17 /var/www/vendor/illuminate/container/Container.php(630): Illuminate\\Container\\Container->resolve('App\\\\Http\\\\Contro...', Array)
+#18 /var/www/vendor/laravel/lumen-framework/src/Application.php(267): Illuminate\\Container\\Container->make('App\\\\Http\\\\Contro...', Array)
+#19 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(311): Laravel\\Lumen\\Application->make('App\\\\Http\\\\Contro...')
+#20 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(278): Laravel\\Lumen\\Application->callControllerAction(Array)
+#21 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(263): Laravel\\Lumen\\Application->callActionOnArrayBasedRoute(Array)
+#22 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(165): Laravel\\Lumen\\Application->handleFoundRoute(Array)
+#23 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(416): Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}(Object(Laravel\\Lumen\\Http\\Request))
+#24 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(171): Laravel\\Lumen\\Application->sendThroughPipeline(Array, Object(Closure))
+#25 /var/www/vendor/laravel/lumen-framework/src/Concerns/RoutesRequests.php(108): Laravel\\Lumen\\Application->dispatch(NULL)
+#26 /var/www/public/index.php(28): Laravel\\Lumen\\Application->run()
+#27 {main}
+"} 
+[2019-10-23 10:24:24] local.ERROR: Symfony\Component\Debug\Exception\FatalErrorException: Interface 'App\Models\ModelInterface' not found in /var/www/app/Models/Document.php:13
+Stack trace:
+#0 /var/www/vendor/laravel/lumen-framework/src/Concerns/RegistersExceptionHandlers.php(54): Laravel\Lumen\Application->handleShutdown()
+#1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#2 {main} {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Interface 'App\\Models\\ModelInterface' not found at /var/www/app/Models/Document.php:13)
+[stacktrace]
+#0 /var/www/vendor/laravel/lumen-framework/src/Concerns/RegistersExceptionHandlers.php(54): Laravel\\Lumen\\Application->handleShutdown()
+#1 [internal function]: Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 {main}
+"} 

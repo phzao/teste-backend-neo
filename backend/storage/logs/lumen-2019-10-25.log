@@ -1,0 +1,366 @@
+[2019-10-25 16:09:26] local.ERROR: Symfony\Component\Console\Exception\NamespaceNotFoundException: There are no commands defined in the "key" namespace. in /var/www/vendor/symfony/console/Application.php:592
+Stack trace:
+#0 /var/www/vendor/symfony/console/Application.php(641): Symfony\Component\Console\Application->findNamespace('key')
+#1 /var/www/vendor/symfony/console/Application.php(237): Symfony\Component\Console\Application->find('key:generate')
+#2 /var/www/vendor/symfony/console/Application.php(149): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /var/www/vendor/illuminate/console/Application.php(90): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 /var/www/vendor/laravel/lumen-framework/src/Console/Kernel.php(115): Illuminate\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 /var/www/artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 {main} {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"key\" namespace. at /var/www/vendor/symfony/console/Application.php:592)
+[stacktrace]
+#0 /var/www/vendor/symfony/console/Application.php(641): Symfony\\Component\\Console\\Application->findNamespace('key')
+#1 /var/www/vendor/symfony/console/Application.php(237): Symfony\\Component\\Console\\Application->find('key:generate')
+#2 /var/www/vendor/symfony/console/Application.php(149): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /var/www/vendor/illuminate/console/Application.php(90): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /var/www/vendor/laravel/lumen-framework/src/Console/Kernel.php(115): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 /var/www/artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 {main}
+"} 
+[2019-10-25 16:09:34] local.ERROR: Symfony\Component\Console\Exception\NamespaceNotFoundException: There are no commands defined in the "generate" namespace. in /var/www/vendor/symfony/console/Application.php:592
+Stack trace:
+#0 /var/www/vendor/symfony/console/Application.php(641): Symfony\Component\Console\Application->findNamespace('generate')
+#1 /var/www/vendor/symfony/console/Application.php(237): Symfony\Component\Console\Application->find('generate:key')
+#2 /var/www/vendor/symfony/console/Application.php(149): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /var/www/vendor/illuminate/console/Application.php(90): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 /var/www/vendor/laravel/lumen-framework/src/Console/Kernel.php(115): Illuminate\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 /var/www/artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 {main} {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"generate\" namespace. at /var/www/vendor/symfony/console/Application.php:592)
+[stacktrace]
+#0 /var/www/vendor/symfony/console/Application.php(641): Symfony\\Component\\Console\\Application->findNamespace('generate')
+#1 /var/www/vendor/symfony/console/Application.php(237): Symfony\\Component\\Console\\Application->find('generate:key')
+#2 /var/www/vendor/symfony/console/Application.php(149): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /var/www/vendor/illuminate/console/Application.php(90): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /var/www/vendor/laravel/lumen-framework/src/Console/Kernel.php(115): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 /var/www/artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 {main}
+"} 
+[2019-10-25 16:21:58] local.ERROR: Symfony\Component\Console\Exception\CommandNotFoundException: Command "make:rule" is not defined.
+
+Did you mean one of these?
+    make:migration
+    make:seeder in /var/www/vendor/symfony/console/Application.php:660
+Stack trace:
+#0 /var/www/vendor/symfony/console/Application.php(237): Symfony\Component\Console\Application->find('make:rule')
+#1 /var/www/vendor/symfony/console/Application.php(149): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 /var/www/vendor/illuminate/console/Application.php(90): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /var/www/vendor/laravel/lumen-framework/src/Console/Kernel.php(115): Illuminate\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 /var/www/artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 {main} {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:rule\" is not defined.
+
+Did you mean one of these?
+    make:migration
+    make:seeder at /var/www/vendor/symfony/console/Application.php:660)
+[stacktrace]
+#0 /var/www/vendor/symfony/console/Application.php(237): Symfony\\Component\\Console\\Application->find('make:rule')
+#1 /var/www/vendor/symfony/console/Application.php(149): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 /var/www/vendor/illuminate/console/Application.php(90): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /var/www/vendor/laravel/lumen-framework/src/Console/Kernel.php(115): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /var/www/artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2019-10-25 17:02:18] local.ERROR: PDOException: SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'172.24.0.5' (using password: YES) in /var/www/vendor/illuminate/database/Connectors/Connector.php:70
+Stack trace:
+#0 /var/www/vendor/illuminate/database/Connectors/Connector.php(70): PDO->__construct('mysql:host=data...', 'homestead', 'secret', Array)
+#1 /var/www/vendor/illuminate/database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=data...', 'homestead', 'secret', Array)
+#2 /var/www/vendor/illuminate/database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=data...', Array, Array)
+#3 /var/www/vendor/illuminate/database/Connectors/ConnectionFactory.php(182): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#5 /var/www/vendor/illuminate/database/Connection.php(920): call_user_func(Object(Closure))
+#6 /var/www/vendor/illuminate/database/Connection.php(945): Illuminate\Database\Connection->getPdo()
+#7 /var/www/vendor/illuminate/database/Connection.php(400): Illuminate\Database\Connection->getReadPdo()
+#8 /var/www/vendor/illuminate/database/Connection.php(326): Illuminate\Database\Connection->getPdoForSelect(true)
+#9 /var/www/vendor/illuminate/database/Connection.php(658): Illuminate\Database\Connection->Illuminate\Database\{closure}('select * from i...', Array)
+#10 /var/www/vendor/illuminate/database/Connection.php(625): Illuminate\Database\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#11 /var/www/vendor/illuminate/database/Connection.php(334): Illuminate\Database\Connection->run('select * from i...', Array, Object(Closure))
+#12 /var/www/vendor/illuminate/database/Schema/MySqlBuilder.php(18): Illuminate\Database\Connection->select('select * from i...', Array)
+#13 /var/www/vendor/illuminate/database/Migrations/DatabaseMigrationRepository.php(169): Illuminate\Database\Schema\MySqlBuilder->hasTable('migrations')
+#14 /var/www/vendor/illuminate/database/Migrations/Migrator.php(585): Illuminate\Database\Migrations\DatabaseMigrationRepository->repositoryExists()
+#15 /var/www/vendor/illuminate/database/Console/Migrations/MigrateCommand.php(91): Illuminate\Database\Migrations\Migrator->repositoryExists()
+#16 /var/www/vendor/illuminate/database/Console/Migrations/MigrateCommand.php(63): Illuminate\Database\Console\Migrations\MigrateCommand->prepareDatabase()
+#17 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->handle()
+#18 /var/www/vendor/illuminate/container/BoundMethod.php(32): call_user_func_array(Array, Array)
+#19 /var/www/vendor/illuminate/support/helpers.php(522): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#20 /var/www/vendor/illuminate/container/BoundMethod.php(90): value(Object(Closure))
+#21 /var/www/vendor/illuminate/container/BoundMethod.php(34): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#22 /var/www/vendor/illuminate/container/Container.php(591): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#23 /var/www/vendor/illuminate/console/Command.php(202): Illuminate\Container\Container->call(Array)
+#24 /var/www/vendor/symfony/console/Command/Command.php(255): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#25 /var/www/vendor/illuminate/console/Command.php(189): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#26 /var/www/vendor/symfony/console/Application.php(934): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#27 /var/www/vendor/symfony/console/Application.php(273): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#28 /var/www/vendor/symfony/console/Application.php(149): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#29 /var/www/vendor/illuminate/console/Application.php(90): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#30 /var/www/vendor/laravel/lumen-framework/src/Console/Kernel.php(115): Illuminate\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#31 /var/www/artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#32 {main}
+
+Next Illuminate\Database\QueryException: SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'172.24.0.5' (using password: YES) (SQL: select * from information_schema.tables where table_schema = homestead and table_name = migrations and table_type = 'BASE TABLE') in /var/www/vendor/illuminate/database/Connection.php:665
+Stack trace:
+#0 /var/www/vendor/illuminate/database/Connection.php(625): Illuminate\Database\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#1 /var/www/vendor/illuminate/database/Connection.php(334): Illuminate\Database\Connection->run('select * from i...', Array, Object(Closure))
+#2 /var/www/vendor/illuminate/database/Schema/MySqlBuilder.php(18): Illuminate\Database\Connection->select('select * from i...', Array)
+#3 /var/www/vendor/illuminate/database/Migrations/DatabaseMigrationRepository.php(169): Illuminate\Database\Schema\MySqlBuilder->hasTable('migrations')
+#4 /var/www/vendor/illuminate/database/Migrations/Migrator.php(585): Illuminate\Database\Migrations\DatabaseMigrationRepository->repositoryExists()
+#5 /var/www/vendor/illuminate/database/Console/Migrations/MigrateCommand.php(91): Illuminate\Database\Migrations\Migrator->repositoryExists()
+#6 /var/www/vendor/illuminate/database/Console/Migrations/MigrateCommand.php(63): Illuminate\Database\Console\Migrations\MigrateCommand->prepareDatabase()
+#7 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->handle()
+#8 /var/www/vendor/illuminate/container/BoundMethod.php(32): call_user_func_array(Array, Array)
+#9 /var/www/vendor/illuminate/support/helpers.php(522): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#10 /var/www/vendor/illuminate/container/BoundMethod.php(90): value(Object(Closure))
+#11 /var/www/vendor/illuminate/container/BoundMethod.php(34): Illuminate\Container\BoundMethod::callBoundMethod(Object(Laravel\Lumen\Application), Array, Object(Closure))
+#12 /var/www/vendor/illuminate/container/Container.php(591): Illuminate\Container\BoundMethod::call(Object(Laravel\Lumen\Application), Array, Array, NULL)
+#13 /var/www/vendor/illuminate/console/Command.php(202): Illuminate\Container\Container->call(Array)
+#14 /var/www/vendor/symfony/console/Command/Command.php(255): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#15 /var/www/vendor/illuminate/console/Command.php(189): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#16 /var/www/vendor/symfony/console/Application.php(934): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /var/www/vendor/symfony/console/Application.php(273): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\MigrateCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /var/www/vendor/symfony/console/Application.php(149): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /var/www/vendor/illuminate/console/Application.php(90): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 /var/www/vendor/laravel/lumen-framework/src/Console/Kernel.php(115): Illuminate\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#21 /var/www/artisan(35): Laravel\Lumen\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 {main} {"exception":"[object] (Illuminate\\Database\\QueryException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'172.24.0.5' (using password: YES) (SQL: select * from information_schema.tables where table_schema = homestead and table_name = migrations and table_type = 'BASE TABLE') at /var/www/vendor/illuminate/database/Connection.php:665)
+[stacktrace]
+#0 /var/www/vendor/illuminate/database/Connection.php(625): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#1 /var/www/vendor/illuminate/database/Connection.php(334): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#2 /var/www/vendor/illuminate/database/Schema/MySqlBuilder.php(18): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#3 /var/www/vendor/illuminate/database/Migrations/DatabaseMigrationRepository.php(169): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#4 /var/www/vendor/illuminate/database/Migrations/Migrator.php(585): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#5 /var/www/vendor/illuminate/database/Console/Migrations/MigrateCommand.php(91): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#6 /var/www/vendor/illuminate/database/Console/Migrations/MigrateCommand.php(63): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#7 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#8 /var/www/vendor/illuminate/container/BoundMethod.php(32): call_user_func_array(Array, Array)
+#9 /var/www/vendor/illuminate/support/helpers.php(522): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#10 /var/www/vendor/illuminate/container/BoundMethod.php(90): value(Object(Closure))
+#11 /var/www/vendor/illuminate/container/BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#12 /var/www/vendor/illuminate/container/Container.php(591): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#13 /var/www/vendor/illuminate/console/Command.php(202): Illuminate\\Container\\Container->call(Array)
+#14 /var/www/vendor/symfony/console/Command/Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#15 /var/www/vendor/illuminate/console/Command.php(189): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#16 /var/www/vendor/symfony/console/Application.php(934): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#17 /var/www/vendor/symfony/console/Application.php(273): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#18 /var/www/vendor/symfony/console/Application.php(149): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#19 /var/www/vendor/illuminate/console/Application.php(90): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#20 /var/www/vendor/laravel/lumen-framework/src/Console/Kernel.php(115): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#21 /var/www/artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 {main}
+
+[previous exception] [object] (PDOException(code: 1045): SQLSTATE[HY000] [1045] Access denied for user 'homestead'@'172.24.0.5' (using password: YES) at /var/www/vendor/illuminate/database/Connectors/Connector.php:70)
+[stacktrace]
+#0 /var/www/vendor/illuminate/database/Connectors/Connector.php(70): PDO->__construct('mysql:host=data...', 'homestead', 'secret', Array)
+#1 /var/www/vendor/illuminate/database/Connectors/Connector.php(46): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=data...', 'homestead', 'secret', Array)
+#2 /var/www/vendor/illuminate/database/Connectors/MySqlConnector.php(24): Illuminate\\Database\\Connectors\\Connector->createConnection('mysql:host=data...', Array, Array)
+#3 /var/www/vendor/illuminate/database/Connectors/ConnectionFactory.php(182): Illuminate\\Database\\Connectors\\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#5 /var/www/vendor/illuminate/database/Connection.php(920): call_user_func(Object(Closure))
+#6 /var/www/vendor/illuminate/database/Connection.php(945): Illuminate\\Database\\Connection->getPdo()
+#7 /var/www/vendor/illuminate/database/Connection.php(400): Illuminate\\Database\\Connection->getReadPdo()
+#8 /var/www/vendor/illuminate/database/Connection.php(326): Illuminate\\Database\\Connection->getPdoForSelect(true)
+#9 /var/www/vendor/illuminate/database/Connection.php(658): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select * from i...', Array)
+#10 /var/www/vendor/illuminate/database/Connection.php(625): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#11 /var/www/vendor/illuminate/database/Connection.php(334): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#12 /var/www/vendor/illuminate/database/Schema/MySqlBuilder.php(18): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#13 /var/www/vendor/illuminate/database/Migrations/DatabaseMigrationRepository.php(169): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#14 /var/www/vendor/illuminate/database/Migrations/Migrator.php(585): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#15 /var/www/vendor/illuminate/database/Console/Migrations/MigrateCommand.php(91): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#16 /var/www/vendor/illuminate/database/Console/Migrations/MigrateCommand.php(63): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#17 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#18 /var/www/vendor/illuminate/container/BoundMethod.php(32): call_user_func_array(Array, Array)
+#19 /var/www/vendor/illuminate/support/helpers.php(522): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#20 /var/www/vendor/illuminate/container/BoundMethod.php(90): value(Object(Closure))
+#21 /var/www/vendor/illuminate/container/BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Laravel\\Lumen\\Application), Array, Object(Closure))
+#22 /var/www/vendor/illuminate/container/Container.php(591): Illuminate\\Container\\BoundMethod::call(Object(Laravel\\Lumen\\Application), Array, Array, NULL)
+#23 /var/www/vendor/illuminate/console/Command.php(202): Illuminate\\Container\\Container->call(Array)
+#24 /var/www/vendor/symfony/console/Command/Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#25 /var/www/vendor/illuminate/console/Command.php(189): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#26 /var/www/vendor/symfony/console/Application.php(934): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 /var/www/vendor/symfony/console/Application.php(273): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 /var/www/vendor/symfony/console/Application.php(149): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 /var/www/vendor/illuminate/console/Application.php(90): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 /var/www/vendor/laravel/lumen-framework/src/Console/Kernel.php(115): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 /var/www/artisan(35): Laravel\\Lumen\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 {main}
+"} 
+[2019-10-25 22:32:13] testing.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'Tests\TestCase' not found in /var/www/tests/Document/DocumentTest.php:12
+Stack trace:
+#0 /var/www/vendor/phpunit/phpunit/src/Util/FileLoader.php(59): include_once()
+#1 /var/www/vendor/phpunit/phpunit/src/Util/FileLoader.php(47): PHPUnit\Util\FileLoader::load('/var/www/tests/...')
+#2 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(346): PHPUnit\Util\FileLoader::checkAndLoad('/var/www/tests/...')
+#3 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(438): PHPUnit\Framework\TestSuite->addTestFile('/var/www/tests/...')
+#4 /var/www/vendor/phpunit/phpunit/src/Util/Configuration.php(1005): PHPUnit\Framework\TestSuite->addTestFiles(Array)
+#5 /var/www/vendor/phpunit/phpunit/src/Util/Configuration.php(874): PHPUnit\Util\Configuration->getTestSuite(Object(DOMElement), Array)
+#6 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(916): PHPUnit\Util\Configuration->getTestSuiteConfiguration('')
+#7 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(167): PHPUnit\TextUI\Command->handleArguments(Array)
+#8 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(159): PHPUnit\TextUI\Command->run(Array, true)
+#9 /var/www/vendor/phpunit/phpunit/phpunit(61): PHPUnit\TextUI\Command::main()
+#10 {main} {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'Tests\\TestCase' not found at /var/www/tests/Document/DocumentTest.php:12)
+[stacktrace]
+#0 /var/www/vendor/phpunit/phpunit/src/Util/FileLoader.php(59): include_once()
+#1 /var/www/vendor/phpunit/phpunit/src/Util/FileLoader.php(47): PHPUnit\\Util\\FileLoader::load('/var/www/tests/...')
+#2 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(346): PHPUnit\\Util\\FileLoader::checkAndLoad('/var/www/tests/...')
+#3 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(438): PHPUnit\\Framework\\TestSuite->addTestFile('/var/www/tests/...')
+#4 /var/www/vendor/phpunit/phpunit/src/Util/Configuration.php(1005): PHPUnit\\Framework\\TestSuite->addTestFiles(Array)
+#5 /var/www/vendor/phpunit/phpunit/src/Util/Configuration.php(874): PHPUnit\\Util\\Configuration->getTestSuite(Object(DOMElement), Array)
+#6 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(916): PHPUnit\\Util\\Configuration->getTestSuiteConfiguration('')
+#7 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(167): PHPUnit\\TextUI\\Command->handleArguments(Array)
+#8 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(159): PHPUnit\\TextUI\\Command->run(Array, true)
+#9 /var/www/vendor/phpunit/phpunit/phpunit(61): PHPUnit\\TextUI\\Command::main()
+#10 {main}
+"} 
+[2019-10-25 22:33:57] testing.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'tests\TestCase' not found in /var/www/tests/Document/DocumentTest.php:12
+Stack trace:
+#0 /var/www/vendor/phpunit/phpunit/src/Util/FileLoader.php(59): include_once()
+#1 /var/www/vendor/phpunit/phpunit/src/Util/FileLoader.php(47): PHPUnit\Util\FileLoader::load('/var/www/tests/...')
+#2 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(346): PHPUnit\Util\FileLoader::checkAndLoad('/var/www/tests/...')
+#3 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(438): PHPUnit\Framework\TestSuite->addTestFile('/var/www/tests/...')
+#4 /var/www/vendor/phpunit/phpunit/src/Util/Configuration.php(1005): PHPUnit\Framework\TestSuite->addTestFiles(Array)
+#5 /var/www/vendor/phpunit/phpunit/src/Util/Configuration.php(874): PHPUnit\Util\Configuration->getTestSuite(Object(DOMElement), Array)
+#6 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(916): PHPUnit\Util\Configuration->getTestSuiteConfiguration('')
+#7 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(167): PHPUnit\TextUI\Command->handleArguments(Array)
+#8 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(159): PHPUnit\TextUI\Command->run(Array, true)
+#9 /var/www/vendor/phpunit/phpunit/phpunit(61): PHPUnit\TextUI\Command::main()
+#10 {main} {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'tests\\TestCase' not found at /var/www/tests/Document/DocumentTest.php:12)
+[stacktrace]
+#0 /var/www/vendor/phpunit/phpunit/src/Util/FileLoader.php(59): include_once()
+#1 /var/www/vendor/phpunit/phpunit/src/Util/FileLoader.php(47): PHPUnit\\Util\\FileLoader::load('/var/www/tests/...')
+#2 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(346): PHPUnit\\Util\\FileLoader::checkAndLoad('/var/www/tests/...')
+#3 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(438): PHPUnit\\Framework\\TestSuite->addTestFile('/var/www/tests/...')
+#4 /var/www/vendor/phpunit/phpunit/src/Util/Configuration.php(1005): PHPUnit\\Framework\\TestSuite->addTestFiles(Array)
+#5 /var/www/vendor/phpunit/phpunit/src/Util/Configuration.php(874): PHPUnit\\Util\\Configuration->getTestSuite(Object(DOMElement), Array)
+#6 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(916): PHPUnit\\Util\\Configuration->getTestSuiteConfiguration('')
+#7 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(167): PHPUnit\\TextUI\\Command->handleArguments(Array)
+#8 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(159): PHPUnit\\TextUI\\Command->run(Array, true)
+#9 /var/www/vendor/phpunit/phpunit/phpunit(61): PHPUnit\\TextUI\\Command::main()
+#10 {main}
+"} 
+[2019-10-25 22:34:41] testing.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'Tests\TestCase' not found in /var/www/tests/Document/DocumentTest.php:12
+Stack trace:
+#0 /var/www/vendor/phpunit/phpunit/src/Util/FileLoader.php(59): include_once()
+#1 /var/www/vendor/phpunit/phpunit/src/Util/FileLoader.php(47): PHPUnit\Util\FileLoader::load('/var/www/tests/...')
+#2 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(346): PHPUnit\Util\FileLoader::checkAndLoad('/var/www/tests/...')
+#3 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(438): PHPUnit\Framework\TestSuite->addTestFile('/var/www/tests/...')
+#4 /var/www/vendor/phpunit/phpunit/src/Util/Configuration.php(1005): PHPUnit\Framework\TestSuite->addTestFiles(Array)
+#5 /var/www/vendor/phpunit/phpunit/src/Util/Configuration.php(874): PHPUnit\Util\Configuration->getTestSuite(Object(DOMElement), Array)
+#6 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(916): PHPUnit\Util\Configuration->getTestSuiteConfiguration('')
+#7 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(167): PHPUnit\TextUI\Command->handleArguments(Array)
+#8 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(159): PHPUnit\TextUI\Command->run(Array, true)
+#9 /var/www/vendor/phpunit/phpunit/phpunit(61): PHPUnit\TextUI\Command::main()
+#10 {main} {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'Tests\\TestCase' not found at /var/www/tests/Document/DocumentTest.php:12)
+[stacktrace]
+#0 /var/www/vendor/phpunit/phpunit/src/Util/FileLoader.php(59): include_once()
+#1 /var/www/vendor/phpunit/phpunit/src/Util/FileLoader.php(47): PHPUnit\\Util\\FileLoader::load('/var/www/tests/...')
+#2 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(346): PHPUnit\\Util\\FileLoader::checkAndLoad('/var/www/tests/...')
+#3 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(438): PHPUnit\\Framework\\TestSuite->addTestFile('/var/www/tests/...')
+#4 /var/www/vendor/phpunit/phpunit/src/Util/Configuration.php(1005): PHPUnit\\Framework\\TestSuite->addTestFiles(Array)
+#5 /var/www/vendor/phpunit/phpunit/src/Util/Configuration.php(874): PHPUnit\\Util\\Configuration->getTestSuite(Object(DOMElement), Array)
+#6 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(916): PHPUnit\\Util\\Configuration->getTestSuiteConfiguration('')
+#7 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(167): PHPUnit\\TextUI\\Command->handleArguments(Array)
+#8 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(159): PHPUnit\\TextUI\\Command->run(Array, true)
+#9 /var/www/vendor/phpunit/phpunit/phpunit(61): PHPUnit\\TextUI\\Command::main()
+#10 {main}
+"} 
+[2019-10-25 22:34:56] testing.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'Tests\TestCase' not found in /var/www/tests/Document/DocumentTest.php:12
+Stack trace:
+#0 /var/www/vendor/phpunit/phpunit/src/Util/FileLoader.php(59): include_once()
+#1 /var/www/vendor/phpunit/phpunit/src/Util/FileLoader.php(47): PHPUnit\Util\FileLoader::load('/var/www/tests/...')
+#2 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(346): PHPUnit\Util\FileLoader::checkAndLoad('/var/www/tests/...')
+#3 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(438): PHPUnit\Framework\TestSuite->addTestFile('/var/www/tests/...')
+#4 /var/www/vendor/phpunit/phpunit/src/Util/Configuration.php(1005): PHPUnit\Framework\TestSuite->addTestFiles(Array)
+#5 /var/www/vendor/phpunit/phpunit/src/Util/Configuration.php(874): PHPUnit\Util\Configuration->getTestSuite(Object(DOMElement), Array)
+#6 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(916): PHPUnit\Util\Configuration->getTestSuiteConfiguration('')
+#7 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(167): PHPUnit\TextUI\Command->handleArguments(Array)
+#8 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(159): PHPUnit\TextUI\Command->run(Array, true)
+#9 /var/www/vendor/phpunit/phpunit/phpunit(61): PHPUnit\TextUI\Command::main()
+#10 {main} {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'Tests\\TestCase' not found at /var/www/tests/Document/DocumentTest.php:12)
+[stacktrace]
+#0 /var/www/vendor/phpunit/phpunit/src/Util/FileLoader.php(59): include_once()
+#1 /var/www/vendor/phpunit/phpunit/src/Util/FileLoader.php(47): PHPUnit\\Util\\FileLoader::load('/var/www/tests/...')
+#2 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(346): PHPUnit\\Util\\FileLoader::checkAndLoad('/var/www/tests/...')
+#3 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(438): PHPUnit\\Framework\\TestSuite->addTestFile('/var/www/tests/...')
+#4 /var/www/vendor/phpunit/phpunit/src/Util/Configuration.php(1005): PHPUnit\\Framework\\TestSuite->addTestFiles(Array)
+#5 /var/www/vendor/phpunit/phpunit/src/Util/Configuration.php(874): PHPUnit\\Util\\Configuration->getTestSuite(Object(DOMElement), Array)
+#6 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(916): PHPUnit\\Util\\Configuration->getTestSuiteConfiguration('')
+#7 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(167): PHPUnit\\TextUI\\Command->handleArguments(Array)
+#8 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(159): PHPUnit\\TextUI\\Command->run(Array, true)
+#9 /var/www/vendor/phpunit/phpunit/phpunit(61): PHPUnit\\TextUI\\Command::main()
+#10 {main}
+"} 
+[2019-10-25 22:35:10] testing.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'Tests\TestCase' not found in /var/www/tests/Document/DocumentTest.php:12
+Stack trace:
+#0 /var/www/vendor/phpunit/phpunit/src/Util/FileLoader.php(59): include_once()
+#1 /var/www/vendor/phpunit/phpunit/src/Util/FileLoader.php(47): PHPUnit\Util\FileLoader::load('/var/www/tests/...')
+#2 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(346): PHPUnit\Util\FileLoader::checkAndLoad('/var/www/tests/...')
+#3 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(438): PHPUnit\Framework\TestSuite->addTestFile('/var/www/tests/...')
+#4 /var/www/vendor/phpunit/phpunit/src/Runner/BaseTestRunner.php(94): PHPUnit\Framework\TestSuite->addTestFiles(Array)
+#5 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(177): PHPUnit\Runner\BaseTestRunner->getTest('.', '', Array)
+#6 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(159): PHPUnit\TextUI\Command->run(Array, true)
+#7 /var/www/vendor/phpunit/phpunit/phpunit(61): PHPUnit\TextUI\Command::main()
+#8 {main} {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'Tests\\TestCase' not found at /var/www/tests/Document/DocumentTest.php:12)
+[stacktrace]
+#0 /var/www/vendor/phpunit/phpunit/src/Util/FileLoader.php(59): include_once()
+#1 /var/www/vendor/phpunit/phpunit/src/Util/FileLoader.php(47): PHPUnit\\Util\\FileLoader::load('/var/www/tests/...')
+#2 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(346): PHPUnit\\Util\\FileLoader::checkAndLoad('/var/www/tests/...')
+#3 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(438): PHPUnit\\Framework\\TestSuite->addTestFile('/var/www/tests/...')
+#4 /var/www/vendor/phpunit/phpunit/src/Runner/BaseTestRunner.php(94): PHPUnit\\Framework\\TestSuite->addTestFiles(Array)
+#5 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(177): PHPUnit\\Runner\\BaseTestRunner->getTest('.', '', Array)
+#6 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(159): PHPUnit\\TextUI\\Command->run(Array, true)
+#7 /var/www/vendor/phpunit/phpunit/phpunit(61): PHPUnit\\TextUI\\Command::main()
+#8 {main}
+"} 
+[2019-10-25 22:36:37] testing.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'Tests\TestCase' not found in /var/www/tests/Document/DocumentTest.php:12
+Stack trace:
+#0 /var/www/vendor/phpunit/phpunit/src/Util/FileLoader.php(59): include_once()
+#1 /var/www/vendor/phpunit/phpunit/src/Util/FileLoader.php(47): PHPUnit\Util\FileLoader::load('/var/www/tests/...')
+#2 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(346): PHPUnit\Util\FileLoader::checkAndLoad('/var/www/tests/...')
+#3 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(438): PHPUnit\Framework\TestSuite->addTestFile('/var/www/tests/...')
+#4 /var/www/vendor/phpunit/phpunit/src/Runner/BaseTestRunner.php(94): PHPUnit\Framework\TestSuite->addTestFiles(Array)
+#5 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(177): PHPUnit\Runner\BaseTestRunner->getTest('.', '', Array)
+#6 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(159): PHPUnit\TextUI\Command->run(Array, true)
+#7 /var/www/vendor/phpunit/phpunit/phpunit(61): PHPUnit\TextUI\Command::main()
+#8 {main} {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'Tests\\TestCase' not found at /var/www/tests/Document/DocumentTest.php:12)
+[stacktrace]
+#0 /var/www/vendor/phpunit/phpunit/src/Util/FileLoader.php(59): include_once()
+#1 /var/www/vendor/phpunit/phpunit/src/Util/FileLoader.php(47): PHPUnit\\Util\\FileLoader::load('/var/www/tests/...')
+#2 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(346): PHPUnit\\Util\\FileLoader::checkAndLoad('/var/www/tests/...')
+#3 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(438): PHPUnit\\Framework\\TestSuite->addTestFile('/var/www/tests/...')
+#4 /var/www/vendor/phpunit/phpunit/src/Runner/BaseTestRunner.php(94): PHPUnit\\Framework\\TestSuite->addTestFiles(Array)
+#5 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(177): PHPUnit\\Runner\\BaseTestRunner->getTest('.', '', Array)
+#6 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(159): PHPUnit\\TextUI\\Command->run(Array, true)
+#7 /var/www/vendor/phpunit/phpunit/phpunit(61): PHPUnit\\TextUI\\Command::main()
+#8 {main}
+"} 
+[2019-10-25 22:37:04] testing.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'Tests\TestCase' not found in /var/www/tests/Document/DocumentTest.php:12
+Stack trace:
+#0 /var/www/vendor/phpunit/phpunit/src/Util/FileLoader.php(59): include_once()
+#1 /var/www/vendor/phpunit/phpunit/src/Util/FileLoader.php(47): PHPUnit\Util\FileLoader::load('/var/www/tests/...')
+#2 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(346): PHPUnit\Util\FileLoader::checkAndLoad('/var/www/tests/...')
+#3 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(438): PHPUnit\Framework\TestSuite->addTestFile('/var/www/tests/...')
+#4 /var/www/vendor/phpunit/phpunit/src/Util/Configuration.php(1005): PHPUnit\Framework\TestSuite->addTestFiles(Array)
+#5 /var/www/vendor/phpunit/phpunit/src/Util/Configuration.php(874): PHPUnit\Util\Configuration->getTestSuite(Object(DOMElement), Array)
+#6 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(916): PHPUnit\Util\Configuration->getTestSuiteConfiguration('')
+#7 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(167): PHPUnit\TextUI\Command->handleArguments(Array)
+#8 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(159): PHPUnit\TextUI\Command->run(Array, true)
+#9 /var/www/vendor/phpunit/phpunit/phpunit(61): PHPUnit\TextUI\Command::main()
+#10 {main} {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'Tests\\TestCase' not found at /var/www/tests/Document/DocumentTest.php:12)
+[stacktrace]
+#0 /var/www/vendor/phpunit/phpunit/src/Util/FileLoader.php(59): include_once()
+#1 /var/www/vendor/phpunit/phpunit/src/Util/FileLoader.php(47): PHPUnit\\Util\\FileLoader::load('/var/www/tests/...')
+#2 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(346): PHPUnit\\Util\\FileLoader::checkAndLoad('/var/www/tests/...')
+#3 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(438): PHPUnit\\Framework\\TestSuite->addTestFile('/var/www/tests/...')
+#4 /var/www/vendor/phpunit/phpunit/src/Util/Configuration.php(1005): PHPUnit\\Framework\\TestSuite->addTestFiles(Array)
+#5 /var/www/vendor/phpunit/phpunit/src/Util/Configuration.php(874): PHPUnit\\Util\\Configuration->getTestSuite(Object(DOMElement), Array)
+#6 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(916): PHPUnit\\Util\\Configuration->getTestSuiteConfiguration('')
+#7 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(167): PHPUnit\\TextUI\\Command->handleArguments(Array)
+#8 /var/www/vendor/phpunit/phpunit/src/TextUI/Command.php(159): PHPUnit\\TextUI\\Command->run(Array, true)
+#9 /var/www/vendor/phpunit/phpunit/phpunit(61): PHPUnit\\TextUI\\Command::main()
+#10 {main}
+"} 
+[2019-10-25 22:37:38] testing.ERROR: Symfony\Component\Debug\Exception\FatalErrorException: Declaration of Faker\Test\Provider\AddressTest::setUp() must be compatible with PHPUnit\Framework\TestCase::setUp(): void in /var/www/vendor/fzaninotto/faker/test/Faker/Provider/AddressTest.php:47
+Stack trace:
+#0 /var/www/vendor/laravel/lumen-framework/src/Concerns/RegistersExceptionHandlers.php(54): Laravel\Lumen\Application->handleShutdown()
+#1 [internal function]: Laravel\Lumen\Application->Laravel\Lumen\Concerns\{closure}()
+#2 {main} {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 64): Declaration of Faker\\Test\\Provider\\AddressTest::setUp() must be compatible with PHPUnit\\Framework\\TestCase::setUp(): void at /var/www/vendor/fzaninotto/faker/test/Faker/Provider/AddressTest.php:47)
+[stacktrace]
+#0 /var/www/vendor/laravel/lumen-framework/src/Concerns/RegistersExceptionHandlers.php(54): Laravel\\Lumen\\Application->handleShutdown()
+#1 [internal function]: Laravel\\Lumen\\Application->Laravel\\Lumen\\Concerns\\{closure}()
+#2 {main}
+"} 
