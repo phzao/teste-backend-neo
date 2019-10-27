@@ -16,6 +16,10 @@ $router->group(['prefix'=>'api/v1'], function () use ($router) {
     $router->get('/documents/{id}', 'DocumentController@show');
     $router->get('/documents/{cpf}/cpf', 'DocumentController@showByCPF');
     $router->get('/documents/{cnpj}/cnpj', 'DocumentController@showByCNPJ');
+    $router->put('/documents/blacklist/add/{id}', 'DocumentController@addBlacklist');
+    $router->put('/documents/blacklist/del/{id}', 'DocumentController@delBlacklist');
     $router->post('/documents', 'DocumentController@store');
-    $router->put('/documents/{id}', 'DocumentController@store');
+    $router->put('/documents/{id}', 'DocumentController@update');
+
+    $router->get('/status', 'TrackActionController@index');
 });

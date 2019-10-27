@@ -9,7 +9,7 @@ export const NavBar = () =>
                 <i className="fa fa-list-alt"></i>
             </div>
             <div className="col-md text-left">
-                <strong>Lista de tarefas</strong>
+                <strong>Controle de CPF/CNPJ</strong>
             </div>
         </div>
     </div>

@@ -1,17 +1,19 @@
+export const url = process.env.REACT_APP_API_URL
+
 export const headerJson = {
     'Accept': 'application/json',
     'content-type': 'application/json',
 }
 
 export const GetData = async (parameters = "") => {
-    const res = await fetch(`http://127.0.0.1:8080/api/v1/tasks-all${parameters}`, {method: 'GET',headers: headerJson})
+    const res = await fetch(`${url}${parameters}`, {method: 'GET',headers: headerJson})
     const json = await res.json()
     
     return json
 }
 
 export const PostData = async (data) => {
-    const res = await fetch('http://127.0.0.1:8080/api/v1/tasks', {
+    const res = await fetch(`${url}documents`, {
         method: 'POST',
         headers: headerJson,
         body: JSON.stringify(data)
@@ -23,7 +25,7 @@ export const PostData = async (data) => {
 }
 
 export const PutData = async (id, parameters = "") => {
-    const res = await fetch(`http://127.0.0.1:8080/api/v1/tasks/${id}${parameters}`, {
+    const res = await fetch(`${url}documents/${id}${parameters}`, {
         method: 'PUT',
         headers: headerJson,
         body: ''
@@ -33,7 +35,7 @@ export const PutData = async (id, parameters = "") => {
 }
 
 export const DeleteData = async (id) => {
-    const res = await fetch(`http://127.0.0.1:8080/api/v1/tasks/${id}`, {
+    const res = await fetch(`${url}documents/${id}`, {
         method: 'DELETE',
         headers: headerJson,
         body: ''

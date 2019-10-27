@@ -50,7 +50,7 @@ class CPF implements Rule
 
             if ($value{$c} != $d) {
 
-                $this->setMessage('CPF Inválido');
+                $this->setMessage('CPF Inválido.');
                 return false;
             }
         }

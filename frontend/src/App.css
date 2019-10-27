@@ -35,6 +35,14 @@
   color: #068014;
 }
 
+.ban-check {
+  color: #ca0a3f;
+}
+
+.type-list {
+  font-weight: bold;
+}
+
 .reopen-task {
   color: #61dafb;
 }

@@ -12,3 +12,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.small {
+  font-size: 6;
+}
+
+.error {
+  color: #ca0a3f;
+}
+
+.document-list-item {
+  font-size: 8;
+  font-weight: bolder;
+}

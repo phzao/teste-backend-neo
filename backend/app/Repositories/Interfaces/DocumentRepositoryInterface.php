@@ -21,4 +21,18 @@ interface DocumentRepositoryInterface extends BaseRepositoryInterface
      * @return mixed
      */
     public function getByCNPJ(string $cnpj);
+
+    /**
+     * @param $id
+     *
+     * @return mixed
+     */
+    public function addToBlacklist($id);
+
+    /**
+     * @param $id
+     *
+     * @return mixed
+     */
+    public function delFromBlacklist($id);
 }

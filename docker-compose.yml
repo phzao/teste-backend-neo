@@ -8,9 +8,6 @@ services:
         container_name: api-php
         volumes:
           - ./backend:/var/www
-        environment:
-          - "DB_PORT=3306"
-          - "DB_HOST=database"
         networks:
           - db-net
 

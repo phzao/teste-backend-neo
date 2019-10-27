@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Document;
-use App\Repositories\Interfaces\DocumentRepositoryInterface;
+use App\Services\Uptime\Interfaces\UptimeServiceInterface;
 use Illuminate\Http\Request;
+use App\Repositories\Interfaces\DocumentRepositoryInterface;
 use Illuminate\Validation\ValidationException;
 
 /**
@@ -19,13 +20,21 @@ class DocumentController extends Controller
     private $repository;
 
     /**
+     * @var UptimeServiceInterface
+     */
+    private $uptimeService;
+
+    /**
      * DocumentController constructor.
      *
      * @param DocumentRepositoryInterface $repository
+     * @param UptimeServiceInterface      $uptimeService
      */
-    public function __construct(DocumentRepositoryInterface $repository)
+    public function __construct(DocumentRepositoryInterface $repository,
+                                UptimeServiceInterface $uptimeService)
     {
-        $this->repository = $repository;
+        $this->repository    = $repository;
+        $this->uptimeService = $uptimeService;
     }
 
     /**
@@ -38,6 +47,7 @@ class DocumentController extends Controller
         try {
 
             $list = $this->repository->allBy($request->all());
+            $this->uptimeService->track($request, "read");
 
             return $this->respond($list);
         } catch(\PDOException $exception) { //db is offline
@@ -52,31 +62,23 @@ class DocumentController extends Controller
     }
 
     /**
-     * @param Request  $request
-     * @param Document $document
-     * @param          $id
+     * @param Request $request
+     * @param         $id
      *
      * @return \Illuminate\Http\JsonResponse
      */
-    public function show(Request $request,
-                         Document $document,
-                         $id)
+    public function show(Request $request, $id)
     {
         try {
 
-            $request->merge(['id' => $id]);
-            $this->validate($request, $document->getRulesID());
-
             $record = $this->repository->getById($id);
+            $this->uptimeService->track($request, "read");
 
             return $this->respond($record);
         } catch(\PDOException $exception) { //db is offline
 
             $this->setStatusCode(503);
             return $this->respondWithErrors($exception->getMessage());
-        } catch (ValidationException $e) { //object validation is failed
-
-            return $this->respondValidationError($e->errors());
         } catch (\Exception $exception) { //error on mysql
 
             $this->setStatusCode(400);
@@ -95,19 +97,19 @@ class DocumentController extends Controller
     {
         try {
 
-            $request->merge(['cpf' => $cpf]);
+            $request->merge(["cpf" => $cpf]);
             $this->validate($request, $document->getCPFRule());
-
             $record = $this->repository->getByCPF($cpf);
+            $this->uptimeService->track($request, "read");
 
             return $this->respond($record);
         } catch(\PDOException $exception) { //db is offline
 
             $this->setStatusCode(503);
             return $this->respondWithErrors($exception->getMessage());
-        } catch (ValidationException $e) { //object validation is failed
+        } catch(ValidationException $exception) { //db is offline
 
-            return $this->respondValidationError($e->errors());
+            return $this->respondValidationError($exception->errors());
         } catch (\Exception $exception) { //error on mysql
 
             $this->setStatusCode(400);
@@ -125,9 +127,9 @@ class DocumentController extends Controller
     public function showByCNPJ(Request $request, Document $document, $cnpj)
     {
         try {
-
-            $request->merge(['cnpj' => $cnpj]);
-            $this->validate($request, $document->getCPFRule());
+            $request->merge(["cnpj" => $cnpj]);
+            $this->validate($request, $document->getCNPJRule());
+            $this->uptimeService->track($request, "read");
 
             $record = $this->repository->getByCNPJ($cnpj);
 
@@ -136,9 +138,9 @@ class DocumentController extends Controller
 
             $this->setStatusCode(503);
             return $this->respondWithErrors($exception->getMessage());
-        } catch (ValidationException $e) { //object validation is failed
+        } catch(ValidationException $exception) { //db is offline
 
-            return $this->respondValidationError($e->errors());
+            return $this->respondValidationError($exception->errors());
         } catch (\Exception $exception) { //error on mysql
 
             $this->setStatusCode(400);
@@ -157,6 +159,7 @@ class DocumentController extends Controller
         try {
 
             $this->validate($request, $document->rules());
+            $this->uptimeService->track($request, "write");
 
             $record = $this->repository->create($request->all());
 
@@ -176,28 +179,23 @@ class DocumentController extends Controller
     }
 
     /**
-     * @param Request  $request
-     * @param Document $document
-     * @param          $id
+     * @param Request $request
+     * @param         $id
      *
      * @return \Illuminate\Http\JsonResponse
      */
-    public function update(Request $request, Document $document, $id)
+    public function update(Request $request, $id)
     {
         try {
-            $request->merge(['id' => $id]);
-            $this->validate($request, $document->getRulesID());
 
             $this->repository->update($id, $request->all());
+            $this->uptimeService->track($request, "update");
 
             return $this->respondUpdatedResource();
         } catch(\PDOException $exception) { //db is offline
 
             $this->setStatusCode(503);
             return $this->respondWithErrors($exception->getMessage());
-        } catch (ValidationException $e) { //object validation is failed
-
-            return $this->respondValidationError($e->errors());
         } catch (\Exception $exception) { //error on mysql
 
             $this->setStatusCode(400);
@@ -206,28 +204,47 @@ class DocumentController extends Controller
     }
 
     /**
-     * @param Request  $request
-     * @param Document $document
-     * @param          $id
+     * @param Request $request
+     * @param         $id
      *
      * @return \Illuminate\Http\JsonResponse
      */
-    public function delete(Request $request, Document $document, $id)
+    public function delBlacklist(Request $request, $id)
     {
         try {
-            $request->merge(['id' => $id]);
-            $this->validate($request, $document->getRulesID());
-
-            $this->repository->delete($id);
+            $this->repository->delFromBlacklist($id);
+            $this->uptimeService->track($request, "update");
 
             return $this->respondUpdatedResource();
         } catch(\PDOException $exception) { //db is offline
 
             $this->setStatusCode(503);
             return $this->respondWithErrors($exception->getMessage());
-        } catch (ValidationException $e) { //object validation is failed
+        } catch (\Exception $exception) { //error on mysql
 
-            return $this->respondValidationError($e->errors());
+            $this->setStatusCode(400);
+            return $this->respondWithErrors($exception->getMessage());
+        }
+    }
+
+    /**
+     * @param Request $request
+     * @param         $id
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function addBlacklist(Request $request, $id)
+    {
+        try {
+
+            $this->repository->addToBlacklist($id);
+            $this->uptimeService->track($request, "update");
+
+            return $this->respondUpdatedResource();
+        } catch(\PDOException $exception) { //db is offline
+
+            $this->setStatusCode(503);
+            return $this->respondWithErrors($exception->getMessage());
         } catch (\Exception $exception) { //error on mysql
 
             $this->setStatusCode(400);

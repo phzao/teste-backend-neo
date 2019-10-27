@@ -42,8 +42,9 @@ interface BaseRepositoryInterface
 
     /**
      * @param array $filter
+     * @param int   $rows
      *
      * @return mixed
      */
-    public function allBy(array $filter);
+    public function allBy(array $filter, $rows = 10);
 }

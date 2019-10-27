@@ -69,13 +69,14 @@ class BaseRepository
 
     /**
      * @param array $content
+     * @param int   $rows
      *
-     * @return \Illuminate\Database\Eloquent\Collection|Model[]|mixed
+     * @return \Illuminate\Database\Eloquent\Collection|Model[]
      */
-    public function allBy(array $content)
+    public function allBy(array $content, $rows = 10)
     {
         if (empty($content)) {
-            return $this->model::all();
+            return $this->model::all()->take($rows);
         }
     }
 

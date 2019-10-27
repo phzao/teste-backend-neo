@@ -48,7 +48,7 @@ class CNPJ implements Rule
 
         if ($cnpj{12} != ($resto < 2 ? 0 : 11 - $resto))
         {
-            $this->setMessage('CNPJ inválido');
+            $this->setMessage('CNPJ inválido.');
             return false;
         }
 
@@ -65,7 +65,7 @@ class CNPJ implements Rule
             return true;
         }
 
-        $this->setMessage('CNPJ inválido');
+        $this->setMessage('CNPJ inválido.');
         return false;
 
     }

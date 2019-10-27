@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import { MyBody } from './components/style/Body';
 import { NavBar } from './components/style/NavBar';
-import BoxTaskList from './components/style/BoxTaskList';
-import BoxNewTask from './components/style/BoxNewTask';
 import Modal from 'react-modal';
+import BoxNewItem from './components/style/BoxNewItem';
+import BoxList from './components/style/BoxList';
 
 Modal.setAppElement('#root')
 
@@ -12,20 +12,20 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      task:{}
+      document:{}
     }
   }
 
   render() {
-    const { task } = this.state
+    const { document } = this.state
     return (
       <MyBody>
         <NavBar />
-        <BoxNewTask 
-          newTask={(task)=>this.setState({task: task})} />
-        <BoxTaskList 
-          addTask={task}
-          refreshTask={()=>this.setState({task:{}})} />
+        <BoxNewItem 
+          newItem={(document)=>this.setState({document: document})} />
+        <BoxList
+          addItem={document}
+          refreshItem={()=>this.setState({document:{}})} />
       </MyBody>
     );
   }

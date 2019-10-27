@@ -109,4 +109,14 @@ class Document extends ModelBase implements DocumentInterface
             'cnpj' => ["digits_between:14,14", new CNPJ],
         ];
     }
+
+    public function setBlacklistStatus(): void
+    {
+        $this->status = 'blocked';
+    }
+
+    public function unsetBlacklistStatus(): void
+    {
+        $this->status = 'enable';
+    }
 }

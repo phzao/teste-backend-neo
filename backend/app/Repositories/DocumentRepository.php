@@ -58,13 +58,19 @@ class DocumentRepository extends BaseRepository implements DocumentRepositoryInt
 
     /**
      * @param array $content
+     * @param int   $rows
      *
      * @return \Illuminate\Database\Eloquent\Collection|\Illuminate\Database\Eloquent\Model[]|mixed
      */
-    public function allBy(array $content)
+    public function allBy(array $content, $rows = 10)
     {
+        if (!empty($content["rows"])) {
+            $rows = $content["rows"];
+            unset($content["rows"]);
+        }
+
         if (empty($content)) {
-            return parent::allBy($content);
+            return parent::allBy($content, $rows);
         }
 
         $queryString = $this->model->getSearchParams($content);
@@ -88,6 +94,38 @@ class DocumentRepository extends BaseRepository implements DocumentRepositoryInt
             });
         }
 
-        return $query->get();
+        return $query
+                    ->take($rows)
+                    ->get();
+    }
+
+    /**
+     * @param $id
+     *
+     * @return mixed
+     */
+    public function addToBlacklist($id)
+    {
+        $register = $this->model::find($id);
+
+        $register->setBlacklistStatus();
+        $register->update();
+
+        return $register;
+    }
+
+    /**
+     * @param $id
+     *
+     * @return mixed
+     */
+    public function delFromBlacklist($id)
+    {
+        $register = $this->model::find($id);
+
+        $register->unsetBlacklistStatus();
+        $register->update();
+
+        return $register;
     }
 }

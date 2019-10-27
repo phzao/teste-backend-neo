@@ -17,4 +17,9 @@ interface DocumentInterface extends ModelInterface
      * @return array
      */
     public function getCNPJRule(): array;
+
+
+    public function setBlacklistStatus(): void;
+
+    public function unsetBlacklistStatus(): void;
 }
