@@ -27,10 +27,10 @@ Cadastrar - POST    http://localhost:8888/api/v1/documents
 Detalhes  - GET     http://localhost:8888/api/v1/documents/{id}
 Atualizar - PUT     http://localhost:8888/api/v1/documents/{id}
 Listar    - GET     http://localhost:8888/api/v1/documents
-Cadastrar na blacklist - POST    http://localhost:8888/api/v1/documents/blacklist/add/{id}
-Remover da blacklist - POST    http://localhost:8888/api/v1/documents/blacklist/del/{id}
-Detalhes com validação CPF  - GET     http://localhost:8888/api/v1/documents/{cpf}/cpf
-Detalhes com validação CNPJ - GET     http://localhost:8888/api/v1/documents/{cnpj}/cnpj
+Cadastrar na blacklist - POST       http://localhost:8888/api/v1/documents/blacklist/add/{id}
+Remover da blacklist - POST         http://localhost:8888/api/v1/documents/blacklist/del/{id}
+Detalhes com validação CPF  - GET   http://localhost:8888/api/v1/documents/{cpf}/cpf
+Detalhes com validação CNPJ - GET   http://localhost:8888/api/v1/documents/{cnpj}/cnpj
 
 Status UPTime  - GET     http://localhost:8888/api/v1/status
 ```
@@ -46,7 +46,7 @@ Para executar o teste unitário deve-se setar a variável de ambiente APP_ENV co
 ```
 APP_ENV=testing
 ```
-*obs: com a troca DB houve uns contratempos com os testes unitários e não houve tempo suficiente p resolver.
+*obs: com a troca de DB ocorreram erros com os testes unitários e não houve tempo suficiente p resolver.
 
 ## Postman collections 
 
